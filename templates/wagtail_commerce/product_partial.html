@@ -1,0 +1,24 @@
+<div class="product">
+
+  <div class="product-details">
+
+      <!-- <img src="{{ product.image }}" alt="{{ product.name }}" class="thumbnail"/> -->
+
+      <a href="{{ product.slug }}">
+
+        <div class="product-description">
+          <p>{{ product_page.title }}</p>
+
+          <button class="snipcart-add-item"
+            data-item-name="{{ product_page.title }}"
+            <!-- data-item-id="{{ product.sku }}" -->
+            <!-- data-item-image="media/{{ product.image }}" -->
+            <!-- data-item-url="{{ product.productAt }}" -->
+            data-item-price="{{ product_page.product.sale_price }}"
+            <!-- data-item-description="{{ product.description }}"> -->
+            Buy it for {{ product_page.product.sale_price }} $
+          </button>
+        </div>
+      </a>
+  </div>
+</div>

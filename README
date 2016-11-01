@@ -1,0 +1,9 @@
+# Settings
+
+*Django project* `settings.py`
+
+- `INSTALLED_APPS = [...]`
+  Add: `'wagtail.contrib.settings'`
+- `TEMPLATES = [{..., 'OPTIONS': { 'context_processors': [ ... ]}]
+  Add into `context_processors`: `'wagtail.contrib.settings.context_processors.settings'`
+- Migrate database: `./migrate.py migrate`

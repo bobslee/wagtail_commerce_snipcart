@@ -1,0 +1,16 @@
+{% extends "wagtail_commerce_snipcart/base.html" %}
+
+{% block content %}
+  {% include "wagtail_commerce_snipcart/snipcart.html" %}
+
+  <div class="site-title">{{ self.title }}</div>
+
+    <div class="products">
+
+      {% for product_page in self.get_children.specific %}
+        {% include "wagtail_commerce/product_partial.html" %}
+      {% endfor %}
+
+    </div>
+
+{% endblock %}
